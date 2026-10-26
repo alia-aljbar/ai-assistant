@@ -15,6 +15,7 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
+        "larastan/larastan": "^3.13",
         "laravel/pail": "^1.2.5",
         "laravel/pao": "^1.0.6",
         "laravel/pint": "^1.27",
@@ -44,6 +45,9 @@
             "npm install --ignore-scripts",
             "npm run build"
         ],
+        "lint": "pint --test",
+        "analyse": "phpstan analyse --memory-limit=1G",
+        "ci": ["@lint", "@analyse", "@test"],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
             "@php artisan dev"
