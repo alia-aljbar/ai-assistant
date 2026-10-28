@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'telegram' => [
+        'token' => env('TELEGRAM_BOT_TOKEN'),
+        'secret' => env('TELEGRAM_SECRET'),
+        'allowed_chat_id' => env('TELEGRAM_ALLOWED_CHAT_ID'),
+    ],
 ];
